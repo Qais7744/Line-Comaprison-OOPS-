@@ -11,13 +11,14 @@ public class Main {
 		Point p2 = new Point();
 		p2.x = 4;
 		p2.y = 5;
-
+		
 		Line l1 = new Line();
 		l1.p1 = p1;
 		l1.p2 = p2;
-
-		float x = l1.getLength();
-		System.out.println("Actual length value : " + x);
+	
+		float x = l1.getLengthlineOne();
+		System.out.println("Calculate Distance between two points : " + x);
+		
 	}
 
 }
