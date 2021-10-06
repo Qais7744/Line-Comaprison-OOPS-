@@ -2,44 +2,45 @@ package com.bl.lineComparison;
 
 public class Main {
 	
+	static final int ZERO = 0, ONE = 1;
+	static void checkLine() {
+
+	}
+
 	public static void main(String[] args) {
 
+		System.out.println("Eneter the first line points");
 		Point p1 = new Point();
-		p1.x = 6;
-		p1.y = 9; 
-
+		p1.x = p1.sacanInput();
+		p1.y = p1.sacanInput();
 		Point p2 = new Point();
-		p2.x = 7;
-		p2.y = 3;
-		
+		p2.x = p2.sacanInput();
+		p2.y = p2.sacanInput();
+		System.out.println("Enter the second line points");
 		Point p3 = new Point();
-		p3.x = 6;
-		p3.y = 9;
-		
+		p3.x = p3.sacanInput();
+		p3.y = p3.sacanInput();
 		Point p4 = new Point();
-		p4.x = 7;
-		p4.y = 3;
+		p4.x = p4.sacanInput();
+		p4.y = p4.sacanInput();
 
 		Line l1 = new Line();
 		l1.p1 = p1;
 		l1.p2 = p2;
-	
+
 		Line l2 = new Line();
 		l2.p3 = p3;
-		l2.p4 = p4;
-	
-		float lineOne = l1.getLengthlineOne();
-		String line1 =Float.toString(lineOne);
-		System.out.println("Distance Between Two point of Lenght line1 : " + lineOne);
-		
-		float lineTwo = l2.getLengthlineTwo();
-		String line2 = Float.toString(lineTwo);
-		System.out.println("Distance Between Two point of Lenght line2 : " + lineTwo);
-		
-		if(line1.equals(line2))
-			System.out.println("Equal");
+		l1.p4 = p4;
+
+		float lineOne = l1.lineLength(p1.x, p1.y, p2.x, p2.y);
+		float lineTwo = l1.lineLength(p3.x, p3.y, p4.x, p4.y);
+		float checkValue = Float.compare(lineOne, lineTwo);
+		if (checkValue == ZERO)
+			System.out.println("Both line are equal");
+		else if (checkValue == ONE)
+			System.out.println("The line one are grater");
 		else
-			System.out.println("Not Equal");
+			System.out.println("The line two are grater");
 	}
 
 }
