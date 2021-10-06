@@ -5,7 +5,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		Point p1 = new Point();
-		p1.x = 5;
+		p1.x = 6;
 		p1.y = 9; 
 
 		Point p2 = new Point();
@@ -13,7 +13,7 @@ public class Main {
 		p2.y = 3;
 		
 		Point p3 = new Point();
-		p3.x = 5;
+		p3.x = 6;
 		p3.y = 9;
 		
 		Point p4 = new Point();
